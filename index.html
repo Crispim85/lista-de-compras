@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<header>
+    <input type="text" id="busca" onkeyup="pesquisarItem()" placeholder="Pesquisar">
+</header>
+
+<main>
+    <section id="itens">
+        <h2>Produtos<button onclick="novoProduto()">Novo produto</button></h2>
+        <ul id="lista"></ul>
+    </section>
+
+    <section id="overlay" onclick="fecharModal()"></section>
+
+    <div id="adicionarItem" class="modal">
+        <h3 id="modal-title">Adicionar produto<i class='bx bxs-x-circle' role="button" aria-label="Fechar modal" onclick="fecharModal()"></i></h3>
+        <form onsubmit="addItem(event)" aria-labelledby="modal-title">
+            <label for="titulo">Nome do produto</label>
+            <input type="text" id="titulo" name="titulo" required>
+            <label for="link">Link do produto (opcional)</label>
+            <input type="url" id="link" name="link">
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+</main>
+    <script src="script.js"></script>
+</body>
+</html>
