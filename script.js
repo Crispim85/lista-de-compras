@@ -6,7 +6,7 @@ const lista = document.getElementById("lista");
 const busca = document.getElementById("busca");
 
 let db;
-const request = indexedDB.open("itensDB", 1);
+const request = indexedDB.open("itensDB", 2);
 
 request.onerror = (event) => {
     console.error("Erro ao abrir o IndexedDB", event);
